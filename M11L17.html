@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stop() animate with parameters</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("#start").click(function(){
+				$("div").animate({left: '100px'}, 5000);
+				$("div").animate({fontSize: '3cm'}, 5000);
+			});
+			$("#stop").click(function(){
+				$("div").stop();
+			});
+			$("#stop2").click(function(){
+				$("div").stop(true);
+			});
+			$("#stop3").click(function(){
+				$("div").stop(true);
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="stop2">Stop all</button>
+<button id="stop3">Stop but finish</button>
+
+<p>The "start" button starts the animation.</p>
+<p>the "stop" button stop the current active animation, but allows the queue animations to be performed afterwards.</p>
+<p>the "stop all"</p>
+<p>the "Stop but finish"</p>
+
+<div style="background: #98bf21;height: 100px;width: 100px;position: absolute;"></div>
+</body>
+</html>
